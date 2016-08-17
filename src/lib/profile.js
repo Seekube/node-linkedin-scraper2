@@ -30,7 +30,7 @@ module.exports = function(window) {
         skills: [],
         languages: []
     };
-    
+
     $('[data-section=currentPositions] td ol li').each(function () {
         profile.currentPositions.push(companyFactory($(this)));
     });

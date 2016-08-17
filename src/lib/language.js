@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(lang) {
+module.exports = function (lang) {
 	return {
 		name: lang.find('.name').text(),
 		proficiency: (function(prof){

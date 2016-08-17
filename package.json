@@ -1,39 +1,31 @@
 {
   "name": "linkedin-scraper2",
-  "version": "2.1.0-pre",
-  "description": "A scraper for LinkedIn, give us a linkedin profile URL and we'll give you a nice data structure",
-  "main": "index.js",
+  "version": "2.2.0-pre",
+  "description": "A scraper for LinkedIn, give us a linkedin profile URL or a dom element and we'll give you a nice data structure",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "./node_modules/.bin/babel src --out-dir dist --watch"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danieljoppi/node-linkedin-scraper2.git"
-  },
-  "scripts": {
-    "test": "gulp test",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "url": "git+https://github.com/Seekube/node-linkedin-scraper2.git"
   },
   "author": "daniel.joppi@suiteplus.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danieljoppi/node-linkedin-scraper2/issues"
+    "url": "https://github.com/Seekube/node-linkedin-scraper/issues"
   },
-  "homepage": "https://github.com/danieljoppi/node-linkedin-scraper2#readme",
+  "homepage": "https://github.com/Seekube/node-linkedin-scraper2#readme",
+  "devDependencies": {
+    "babel-cli": "6.6.5",
+    "babel-core": "6.7.4",
+    "babel-preset-es2015": "6.6.0"
+  },
   "dependencies": {
     "jquery": "^3.1.0",
     "jsdom": "^9.4.1",
-    "q": "^2.0.3",
-    "random-useragent": "^0.3.0"
-  },
-  "devDependencies": {
-    "coveralls": "*",
-    "eslint": "*",
-    "eslint-plugin-mocha": "*",
-    "gulp": "*",
-    "gulp-eslint": "*",
-    "gulp-istanbul": "*",
-    "gulp-load-plugins": "*",
-    "gulp-mocha": "*",
-    "gulp-plumber": "*",
-    "require-dir": "*",
-    "should": "*"
+    "q": "^2.0.3"
   }
 }
+

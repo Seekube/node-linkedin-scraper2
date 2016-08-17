@@ -1,6 +1,5 @@
-var jsdom = require('jsdom'),
-    Q = require('q'),
-    randomUserAgent = require('random-useragent');
+import jsdom from 'jsdom';
+import Q from 'q';
 
 module.exports = function (originalUrl, callback) {
     var deferred = Q.defer();

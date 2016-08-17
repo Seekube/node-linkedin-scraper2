@@ -57,22 +57,3 @@ export const parsingUrl = (url, callback) => {
 
     return deferred.promise;
 }
-
-/**
- * Export DOM
- */
-export const parsingDom = (window, callback) => {
-
-    const deferred = Q.defer();
-
-    const profile = profileFactory(window);
-    profile.publicProfileUrl = url;
-
-    if(callback) {
-        return callback(null, profile);
-    }
-
-    deferred.resolve(profile);
-
-    return deferred.promise;
-}

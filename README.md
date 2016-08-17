@@ -7,33 +7,23 @@ A simple LinkedIn profile scraper for nodejs, based on original [linkedin-scrape
 #### with callback function
 ```javascript
 // Scrape a linkedin profile for the public contents
-const parsingUrl = require('linkedin-scraper').parsingUrl;
-const parsingDom = require('linkedin-scraper').parsingDom;
+const parsingUrl = require('linkedin-scraper2').parsingUrl;
 const url = 'https://www.linkedin.com/in/[user]';
 
 parsingUrl(url, (err, profile) => {
     if (err) {
-        console.log(err);
-    } else {
-        console.log(profile);
+        return console.log(err);
     }
-});
 
-parsingDom(window, (err, profile) => {
-    if (err) {
-        console.log(err);
-    } else {
-        console.log(profile);
-    }
+    // Success
+    console.log(profile);
 });
-
 ```
 
 #### with promise
 ```javascript
 // Scrape a linkedin profile for the public contents
-const parsingUrl = require('linkedin-scraper').parsingUrl;
-const parsingDom = require('linkedin-scraper').parsingDom;
+const parsingUrl = require('linkedin-scraper2').parsingUrl;
 const url = 'https://www.linkedin.com/in/[user]';
 
 parsingUrl(url)
@@ -44,13 +34,6 @@ parsingUrl(url)
         console.log(err);
     });
 
-parsingDom(window)
-    .then((profile) => {
-        console.log(profile);
-    })
-    .catch((err) => {
-        console.log(err);
-    });
 ```
 
 #### output

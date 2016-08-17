@@ -1,7 +1,7 @@
 {
   "name": "linkedin-scraper2",
   "version": "2.2.0-pre",
-  "description": "A scraper for LinkedIn, give us a linkedin profile URL or a dom element and we'll give you a nice data structure",
+  "description": "A scraper for LinkedIn, give us a linkedin profile URL and we'll give you a nice data structure",
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",

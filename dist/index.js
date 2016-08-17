@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.parsingDom = exports.parsingUrl = undefined;
+exports.parsingUrl = undefined;
 
 var _profile = require('./lib/profile');
 
@@ -70,25 +70,6 @@ var parsingUrl = exports.parsingUrl = function parsingUrl(url, callback) {
 
     // Start recursive function
     parsing(1);
-
-    return deferred.promise;
-};
-
-/**
- * Export DOM
- */
-var parsingDom = exports.parsingDom = function parsingDom(window, callback) {
-
-    var deferred = _q2.default.defer();
-
-    var profile = (0, _profile2.default)(window);
-    profile.publicProfileUrl = url;
-
-    if (callback) {
-        return callback(null, profile);
-    }
-
-    deferred.resolve(profile);
 
     return deferred.promise;
 };
